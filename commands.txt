@@ -1,0 +1,71 @@
+git clone https://github.com/mariyamkhan-git/student-task-manager.git
+pwd
+git status
+added files app.py,README.txt,requirements.txt and a .gitignore (commands.txt initially places inside .gitignore)
+git status
+git add .
+git commit -m "chore: initialize project structure"
+git log --oneline
+git push -u origin main
+created an issue#1 -- Implement task creation
+git checkout -b feature/add-task
+git branch
+git add app.py
+git commit -m "feat: add task creation functionality"
+git push -u origin feature/add-task
+Pull Request
+created an issue#3 -- Display all tasks
+git checkout main
+git pull
+git checkout -b feature/view-tasks
+git add app.py
+git commit -m "feat: implement task listing"
+git checkout main
+git add README.md
+git commit -m "docs: update project documentation with tech"
+git push
+git checkout feature/view-tasks
+git rebase main
+resolve conflicts
+git push --force-with-lease (safely pushes your changes to remote after a rebase by ensuring nobody else has pushed unexpected changes.)
+git checkout main
+git commit -am "docs: rename application title"
+git checkout feature/view-tasks
+git commit -am "docs: update project title"
+git rebase main
+resolve conflicts
+git add .
+git rebase --continue
+git status
+git stash list
+git checkout main
+git checkout feature/view-tasks
+git stash pop
+git push
+
+error-- Your branch and 'origin/feature/view-tasks' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+git status  
+git log --oneline --graph --all --decorate
+git push --force-with-lease origin feature/view-tasks
+since out local main is one step ahead of remote main
+git checkout main
+git push origin main
+Pull Request to merge view-task to main
+git checkout -b feature/export
+git add app.py
+git commit -m "feat: export tasks to text file"
+git log --oneline
+#aca9e5f commit hash
+git push -u origin feature/export
+git checkout main
+git cherry-pick aca9e5f
+git add CONTRIBUTING.md
+git commit -m "docs: add contributing guidelines"
+
+Now removing my commandstxt from .gitignore
+git add commands.txt
+git status
+git commit -m "docs:commands.txt -- history of all commands ran"

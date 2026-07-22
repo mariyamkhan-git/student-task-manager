@@ -13,13 +13,26 @@ def export_tasks():
         for task in tasks:
             file.write(task["title"] + "\n")
 
+def view_tasks():
+
+    if not tasks:
+        print("No tasks found.")
+        return
+
+    print("\nTasks")
+
+    for index, task in enumerate(tasks, start=1):
+        status = "✓" if task["completed"] else " "
+
+        print(f"{index}. [{status}] {task['title']}")
+
+
 def main():
-    print("Student Task Manager")
 
     add_task("Study Git")
-    add_task("Study Django")
+    add_task("Practice Django")
 
-    print(tasks)
+    view_tasks()
 
 
 if __name__ == "__main__":

@@ -1,6 +1,16 @@
 # Student Task Manager
 
-A simple command-line application for managing student tasks.
+A command-line task manager built in Python.
+
+## Technologies
+
+- Python
+
+- Git
+
+- GitHub
+
+-Brain
 
 ## Features
 

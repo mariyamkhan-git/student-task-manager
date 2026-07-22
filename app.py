@@ -5,6 +5,13 @@ def add_task(task):
         "title": task,
         "completed": False
     })
+    
+def export_tasks():
+
+    with open("tasks.txt", "w") as file:
+
+        for task in tasks:
+            file.write(task["title"] + "\n")
 
 def main():
     print("Student Task Manager")
